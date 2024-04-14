@@ -2,6 +2,7 @@ import tkinter as tk
 from tkinter import ttk, filedialog
 import sqlite3
 from tkcalendar import Calendar
+from ttkthemes import ThemedTk
 
 # Function to generate time options in 30-minute increments
 def generate_time_options():
@@ -13,9 +14,9 @@ def generate_time_options():
 
 # Function to save appointment to SQLite database
 def save_appointment():
-    appointment_date = cal.selection_get()
+    appointment_date = cal.get_date()
     appointment_time = time_var.get()
-    appointment_description = description_entry.get("1.0", "end-1c")
+    appointment_description = description_entry.get("1.0", tk.END)
     
     conn = sqlite3.connect('appointments.db')
     c = conn.cursor()
@@ -30,7 +31,7 @@ def save_appointment():
 
 # Function to clear the form fields
 def clear_form():
-    cal.selection_clear()
+    cal.clear()
     description_entry.delete("1.0", tk.END)
 
 # Function to display saved appointments
@@ -66,7 +67,7 @@ def export_appointments():
                 f.write(f"Date: {appointment[0]}, Time: {appointment[1]}, Description: {appointment[2]}\n")
 
 # Main GUI
-root = tk.Tk()
+root = ThemedTk(theme="radiance")
 root.title("Appointment Scheduler")
 
 # Calendar widget
@@ -77,27 +78,27 @@ cal.pack(pady=10)
 times = generate_time_options()
 time_var = tk.StringVar(root)
 time_var.set(times[0])
-time_label = tk.Label(root, text="Time:")
+time_label = ttk.Label(root, text="Time:")
 time_label.pack()
-time_menu = ttk.Combobox(root, textvariable=time_var, values=times)
+time_menu = ttk.Combobox(root, textvariable=time_var, values=times, state="readonly")
 time_menu.pack()
 
 # Text widget for description
-description_label = tk.Label(root, text="Description:")
+description_label = ttk.Label(root, text="Description:")
 description_label.pack()
 description_entry = tk.Text(root, height=5, width=30)
 description_entry.pack()
 
 # Save button
-save_button = tk.Button(root, text="Save Appointment", command=save_appointment)
+save_button = ttk.Button(root, text="Save Appointment", command=save_appointment)
 save_button.pack()
 
 # Display appointments button
-display_button = tk.Button(root, text="Display Appointments", command=display_appointments)
+display_button = ttk.Button(root, text="Display Appointments", command=display_appointments)
 display_button.pack()
 
 # Export appointments button
-export_button = tk.Button(root, text="Export Appointments", command=export_appointments)
+export_button = ttk.Button(root, text="Export Appointments", command=export_appointments)
 export_button.pack()
 
 root.mainloop()
