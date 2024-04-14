@@ -1,0 +1,51 @@
+altgraph==0.17.4
+argcomplete @ file:///private/tmp/python-argcomplete-20240123-4670-x1ivz6/argcomplete-3.2.2
+attrs==23.2.0
+Brotli @ file:///private/tmp/python-brotli-20231117-5241-4nexpv/Brotli-1.1.0
+certifi @ file:///private/tmp/certifi-20240307-4614-15z07l/certifi-2024.2.2
+cffi @ file:///private/tmp/cffi-20231014-5454-1xfyd4s/cffi-1.16.0
+charset-normalizer==3.3.2
+click==8.1.7
+click-plugins==1.1.1
+cligj==0.7.2
+contourpy==1.2.1
+cryptography @ file:///private/tmp/python-cryptography-20240305-5896-pgxrbp/cryptography-42.0.5
+cycler==0.12.1
+docutils @ file:///private/tmp/docutils-20231123-5172-atdz13/docutils-0.20.1
+fiona==1.9.6
+fonttools==4.51.0
+geopandas==0.14.3
+gpg==1.23.2
+idna==3.7
+Jinja2 @ file:///private/tmp/python-jinja-20240110-4530-iiyc4w/Jinja2-3.1.3
+kiwisolver==1.4.5
+lxml @ file:///private/tmp/python-lxml-20240108-4480-1ugdbc/lxml-5.1.0
+macholib==1.16.3
+MarkupSafe @ file:///private/tmp/python-markupsafe-20240119-4504-wjv7h5/MarkupSafe-2.1.4
+matplotlib==3.8.4
+mutagen @ file:///private/tmp/python-mutagen-20231008-5381-g1gbh9/mutagen-1.47.0
+networkx==3.3
+numpy @ file:///private/tmp/numpy-20240206-5948-gu6j5s/numpy-1.26.4
+openvino==2024.0.0
+osmnx==1.9.2
+packaging==24.0
+pandas==2.2.2
+pillow==10.3.0
+pycparser @ file:///private/tmp/pycparser-20231013-5559-1dtd22y/pycparser-2.21
+Pygments @ file:///private/tmp/pygments-20231121-5079-e7uuzt/pygments-2.17.2
+pyinstaller==6.6.0
+pyinstaller-hooks-contrib==2024.4
+pyparsing @ file:///private/tmp/python-pyparsing-20231009-5290-1bhvb84/pyparsing-3.1.1
+pyproj==3.6.1
+python-dateutil @ file:///private/tmp/python-dateutil-20231119-4809-10tr8ez/python-dateutil-2.8.2
+pytz @ file:///private/tmp/python-pytz-20240128-4526-wdxblv/pytz-2023.4
+PyYAML @ file:///private/tmp/pyyaml-20231018-5457-utbrds/PyYAML-6.0.1
+requests==2.31.0
+setuptools @ file:///private/tmp/python-setuptools-20240223-4380-zy1ml1/setuptools-69.1.1
+shapely==2.0.3
+six==1.16.0
+systemtools==1.0.2
+TBB @ file:///private/tmp/tbb-20231202-4800-tiu1mu/oneTBB-2021.11.0/python
+tzdata==2024.1
+urllib3==2.2.1
+wheel @ file:///opt/homebrew/Cellar/python%403.12/3.12.2_1/libexec/wheel-0.43.0-py3-none-any.whl#sha256=b66b1ea367126425ba6ef889a0c0b800a291c380b7c313f2198876288fb9be06
