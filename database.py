@@ -1,8 +1,7 @@
 import tkinter as tk
 from tkinter import ttk
 import sqlite3
-from datetime import datetime
-from dateutil import tz
+from datetime import datetime, timedelta
 
 # Function to create the SQLite database and the 'demerits' table
 def create_database():
@@ -28,13 +27,11 @@ def add_demerit():
     person = person_var.get()
     notes = notes_entry.get("1.0", "end").strip()
 
-    # Get current date and time in Pacific Standard Time (PST)
-    from_zone = tz.gettz('UTC')
-    to_zone = tz.gettz('America/Los_Angeles')
-    utc_time = datetime.utcnow()
-    utc_time = utc_time.replace(tzinfo=from_zone)
-    pst_time = utc_time.astimezone(to_zone)
-    date_added = pst_time.strftime("%Y-%m-%d %H:%M:%S")
+    # Get current date and time
+    current_time = datetime.now()
+
+    # Format date_added
+    date_added = current_time.strftime("%Y-%m-%d %H:%M:%S")
 
     conn = sqlite3.connect('demerits.db')
     c = conn.cursor()
